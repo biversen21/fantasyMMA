@@ -5,12 +5,6 @@ var FightsView = Backbone.View.extend({
 		this.render();
 	},
 	
-	events: {
-		'click span': function(el){
-			console.log(el.currentTarget.className);
-		}
-	},
-	
 	render: function(){
 		this.$el.children().detach();
 		this.$el.html('<div>Fights</div><br>').append(
