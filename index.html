@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+  <head>
+	  <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js"></script>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.2/backbone-min.js"></script>
+		<link rel="stylesheet" href="./styles.css">
+		<script src="./app.js"></script>
+		<script src="./AppView.js"></script>
+		<script src="./data.js"></script>
+		<script src="./Fighter.js"></script>
+		<script src="./Fights.js"></script>
+		<script src="./FightsView.js"></script>
+		<script src="./FighterView.js"></script>
+	</head>
+
+  <body>
+		<script>
+		$(function(){
+			var fighters = new Fights(fightersData);
+			var app = new AppModel({fighters: fighters});
+			var appView = new AppView({model: app});
+			
+			$('body').append(appView.render());
+		});
+		</script>
+	</body>
+</html>
