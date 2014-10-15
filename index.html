@@ -5,15 +5,19 @@
 		<script src="http://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.2/backbone-min.js"></script>
 		<link rel="stylesheet" href="./styles.css">
 		<script src="./app.js"></script>
-		<script src="./AppView.js"></script>
 		<script src="./data.js"></script>
 		<script src="./Fighter.js"></script>
 		<script src="./Fights.js"></script>
+		<script src="./Picks.js"></script>
+		<script src="./Results.js"></script>
+		
+		<script src="./AppView.js"></script>
 		<script src="./FightsView.js"></script>
 		<script src="./FighterView.js"></script>
-		<script src="./Picks.js"></script>
 		<script src="./PicksView.js"></script>
 		<script src="./PickEntryView.js"></script>
+		<script src="./OpponentEntryView.js"></script>
+		<script src="./ResultsView.js"></script>
 	</head>
 
   <body>
@@ -23,8 +27,13 @@
 			var app = new AppModel({fighters: fighters});
 			var appView = new AppView({model: app});
 			
+			var results = ['Jose Aldo', 'Phil Davis'];
+			
 			$('body').append(appView.render());
+			
+			$('#determine-winner').on('click', function(){app.determine(results)});
 		});
 		</script>
+		<button id='determine-winner'>See Results</button>
 	</body>
 </html>

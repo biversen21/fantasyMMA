@@ -1,3 +1,16 @@
 span {
   display: inline-block;
 }
+
+/*.picks {
+	display: inline-block;
+}
+
+.opponent-picks {
+	display: inline-block;
+	float: right;
+}
+
+.opponent-header {
+	text-align: right;
+}*/

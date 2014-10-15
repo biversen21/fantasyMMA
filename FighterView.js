@@ -6,6 +6,7 @@ var FighterView = Backbone.View.extend({
 	events: {
 		'click span': function(el){
 			this.model.select(el.currentTarget.className);
+			$(el.currentTarget).css('border', '1px solid black');
 		}
 	},
 	
